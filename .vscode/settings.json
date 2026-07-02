@@ -1,5 +1,5 @@
 {
-    "editor.fontSize": 20,
+    "editor.fontSize": 14,
     "editor.cursorBlinking": "solid",
     "editor.fontFamily": "Cascadia Mono",
     "editor.suggest.showVariables": true,

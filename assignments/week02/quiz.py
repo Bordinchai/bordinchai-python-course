@@ -18,6 +18,22 @@ Below 18.5: Underweight
 
 """
 
+#BMI Calculater
+
+weight = float(input("Enter Weight(kg):"))
+height = float(input("Enter Height(meter):"))
+Bmi = weight / (height ** 2)
+
+print(round(Bmi,1))
+
+if Bmi >= 30:
+    print("Obese")
+elif Bmi < 30:
+    print("Overweight")
+elif Bmi < 25:
+    print("Normalweight")
+else:
+    print("Underweight")
 
 """
 Question 2: Currency Converter (20 points)
@@ -31,3 +47,19 @@ Use exchange rate: 1 USD = 35.5 THB
 Display result with 2 decimal places
 Show the calculation formula used
 """
+
+#Currency Converter
+
+print("Choose your currency to convert")
+print("THB to US type:1")
+print("US to THB type:2")
+choice = int(input("Enter:"))
+match choice:
+    case 1:
+        THB = float(input("Enter amount:"))
+        USD = THB / 35.5
+        print("Total:",round(USD,2))
+    case 2:
+        USD = float(input("Enter amount:"))
+        THB = USD * 35.5
+        print("Total:",round(THB,2))
