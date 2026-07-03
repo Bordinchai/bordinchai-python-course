@@ -86,7 +86,7 @@ current_year = 2569
 favorite_number = 5.32
 
 # Boolean variable indicating if you like pizza
-likes_pizza = bool(0)
+likes_pizza = False
 
 # Print all variables with descriptive messages
 print("My favorite color is:", favorite_color)
