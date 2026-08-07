@@ -117,6 +117,14 @@ result = multiply(4, 5) + square(3)
 print(f"multiply(4, 5) + square(3) = {multiply(4, 5)} + {square(3)} = {result}")
 print()
 
+# จงหาผลรันโปรแกรมใน Example 3: ด้านบน
+"""
+Result in output:
+Using return values in expressions:
+multiply(4, 5) + square(3) = 20 + 9 = 29
+ 
+"""
+
 # =============================================================================
 # PART 4: DEFAULT PARAMETERS
 # =============================================================================
@@ -205,12 +213,27 @@ def calculate_grade(score):
     else:
         return "F"
 
+
+def gpa(Grade_list):
+    if not Grade_list:
+        return 0.0
+
+    grade_points = {"A": 4.0, "B": 3.0, "C": 2.0, "D": 1.0, "F": 0.0}
+
+    total_points = sum(grade_points.get(grade, 0.0) for grade in Grade_list)
+    return total_points / len(Grade_list)
+
+
 print("Grade Calculator:")
+grade_list = []
 test_scores = [95, 87, 73, 68, 45]
+
 for score in test_scores:
     grade = calculate_grade(score)
+    grade_list.append(grade)
     print(f"Score {score} = Grade {grade}")
-print()
+
+print(f"total gpa equal {gpa(grade_list):.2f}")
 
 # Example 2: Password validator
 def is_strong_password(password):

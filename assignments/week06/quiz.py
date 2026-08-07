@@ -26,6 +26,9 @@ def calculate_circle(radius):
 return string ที่จัดรูปแบบข้อมูลผู้ใช้
 รูปแบบ: "[username] (age: [age]) - [Premium User / Standard User]"
 
+print(create_user_profile("Boonchoo", 48))
+print(create_user_profile("Manee"))
+print(create_user_profile("Piti", 23, True))
 """
 
 def create_user_profile(username, age=18, premium=False):
