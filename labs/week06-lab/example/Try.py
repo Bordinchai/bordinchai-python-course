@@ -27,9 +27,9 @@ def convert_currency(value, country1, country2):
         if country2 == "THB":
             return value*22/100
         elif country2 == "USD":
-            return value*100/0.68
+            return value*0.68/100
         else: print("Error_country2")
     else: print("Error_country1")
 
-Convert = convert_currency(100, "JPY", "THB")
+Convert = convert_currency(1000, "JPY", "USD")
 print(f"{Convert}")
