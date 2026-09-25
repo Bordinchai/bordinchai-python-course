@@ -22,3 +22,21 @@ class Rectangle:
 rect = Rectangle(10, 5)
 print(rect.get_area())       # Should print 50
 print(rect.get_perimeter())  # Should print 30
+
+"""
+ขอให้สร้างclass circle
+"""
+class Circle:
+    Pi = 3.14
+    def __init__(self, range):
+        self.range = range
+
+    def get_area(self):
+        return f"Area of Circle :{self.Pi * (self.range**2)}"
+
+    def get_perimeter(self):
+        return f"Perimeter of Circle :{2*self.Pi*self.range}"
+
+myCircle = Circle(10)
+print(myCircle.get_area())
+print(myCircle.get_perimeter())
