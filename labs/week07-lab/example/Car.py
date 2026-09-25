@@ -1,5 +1,6 @@
 class Car:
     # Class attribute (shared by all instances)
+    # Fix value
     wheels = 4
     vehicle_type = "Car"
     
@@ -14,7 +15,7 @@ class Car:
         """Method to update mileage"""
         self.mileage += distance
         return f"Drove {distance} km. Total mileage: {self.mileage} km"
-    
+
     def get_info(self):
         """Method to get car information"""
         return f"{self.year} {self.brand} {self.model} - Mileage: {self.mileage} km"
@@ -24,18 +25,20 @@ class Car:
         """Class method to access class attributes"""
         return cls.vehicle_type
 
-# Creating instances
+# Creating instances ==> สร้างวัตถุจากClass
 car1 = Car("Toyota", "Camry", 2022)
 car2 = Car("Honda", "Civic", 2021)
 
-# Accessing class attributes
+# Accessing class attributes ==> เข้าถึง attribute class
 print(f"All cars have {Car.wheels} wheels")
 print(f"Vehicle type: {Car.get_vehicle_type()}")
 
-# Accessing instance attributes
+# Accessing instance attributes ==> เข้าถึง attribute
 print(car1.get_info())
 print(car2.get_info())
 
-# Using methods
+# Using methods ==> เรียกใช้ method ของclass
 print(car1.drive(100))
 print(car2.drive(250))
+
+print(car1.drive(200)) #Drove 200 km. Total  mileage: 300 km
